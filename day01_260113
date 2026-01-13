@@ -1,3 +1,32 @@
 #solved.ac 풀이
 #2026.01.13
+#푼 문항 수 : 18개(~array01)
   
+# 금일 풀이 대표문제
+# baekjoon-9498-시험성적 | https://www.acmicpc.net/problem/9498
+# switch-case 문 활용하여 풀이 진행
+#include <stdio.h>
+
+int main(void) {
+    int score;
+    scanf("%d", &score);
+    
+    switch(score/10) {
+        case 10:
+        case 9:
+            printf("A");
+            break;
+        case 8:
+            printf("B");
+            break;
+        case 7:
+            printf("C");
+            break;
+        case 6:
+            printf("D");
+            break;
+        default:
+            printf("F");
+    }
+}
+
