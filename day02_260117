@@ -1,0 +1,37 @@
+#solved.ac 풀이
+#2026.01.17
+#푼 문항 수 : 12개
+  
+# 금일 풀이 대표문제
+# baekjoon-10818-최대, 최소 | https://www.acmicpc.net/problem/10818
+# 함수 및 포인터 활용하여 풀이 진행
+#include <stdio.h>
+
+int min(int *, int );
+int max(int *, int );
+
+int main(void) {
+    int N;
+    scanf("%d", &N);
+    
+    int *inputs = new int[N];
+    for(int i = 0; i < N; i++) scanf("%d", &inputs[i]);
+    
+    printf("%d %d", min(inputs, N), max(inputs, N));
+}
+
+int min(int *arr, int N) {
+    int min = 1000000;
+    for(int i = 0; i < N; i++) {
+        if(arr[i] < min) min = arr[i];
+    }
+    return min;
+}
+
+int max(int *arr, int N) {
+    int max = -1000000;
+    for(int i = 0; i < N; i++) {
+        if(arr[i] > max) max = arr[i];
+    }
+    return max;
+}
